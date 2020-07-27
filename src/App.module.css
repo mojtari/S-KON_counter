@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+
+}
+
+.App header {
+  background-color: #282c34;
+  color: white;
+}
+
+.App main{
+    width: 80%;
+    margin: auto;
+}
+
+.counter_display{
+ background-color: #ffffff;
+ font-weight: bold;
+font-size: 40px;
+width: 50%;
+margin: auto;
+border: 1px solid #ccc;
+padding: 20px 0px;
+}
+
+.counter_controlls{
+    margin: 20px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.App button {
+  padding: 10px;
+  background-color: rgb(41, 92, 168);
+  border-radius: 5px;
+  color: white;
+  border-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.App button:disabled {
+  cursor: not-allowed;
+  background-color: darkgray;
+}
