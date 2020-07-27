@@ -2,13 +2,22 @@ import React from "react";
 import styles from "./App.module.css";
 
 class App extends React.Component {
+  /*
+  initial State für den Counter
+  */
   state = {
     counterValue: 0,
     isCounting: false,
     intervalId: null,
   };
 
-  //EventHandler zum starten den Zähler
+
+
+  /*
+  EventHandler zum starten den Zähler
+  mittels setInterval wird die counterValue hochgezählt
+
+  */
   startCounter = () => {
 
     const interval = setInterval(() => {
@@ -20,10 +29,14 @@ class App extends React.Component {
     }, 500);
   };
 
-  //EventHandler zum stoppen den Zähler
+  
+  /*
+   EventHandler zum stoppen den Zähler
+   Falls der Counter läuft, wird er gestoppt sonst wird die Methode verlassen.
+   */
   stopCounter = () => {
     if (!this.state.isCounting) return;
-    
+
     clearInterval(this.state.intervalId);
 
     this.setState({
@@ -32,7 +45,11 @@ class App extends React.Component {
     });
   };
 
-  //EventHandler zum zurücksetzen den Zähler
+
+
+  /*
+  EventHandler zum zurücksetzen den Zähler
+  */
   resetCounter = () => {
     if (!this.state.isCounting) {
       clearInterval(this.state.intervalId);
